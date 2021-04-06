@@ -1,2 +1,2 @@
 # osa-comp-sci
-Keep track of my Old Scona Computing Adventures
+Keep track of my Old Scona computing adventures
