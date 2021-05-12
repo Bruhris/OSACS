@@ -5,6 +5,7 @@ import copy
 def assignPrizes(prizes, prizeBoard):
     for i in prizes:
         for k in range(3):
+            # Places 3 of each prize on the board and has error check to see if prizes overlap
             boardX = random.randint(0, 4)
             boardY = random.randint(0, 4)
             while prizeBoard[boardX][boardY] != "[        ]":
@@ -37,6 +38,7 @@ def print_board(board):
 
 def check_Prize(prize):
     global puzzle, poster, ball, doll, game, endMessage
+    # Checks to see if you hit a certain prize more than once and if you hit three, adds a message saying that you won a prize
     if prize == "[ Puzzle ]":
         puzzle += 1
         if puzzle == 3:
@@ -65,49 +67,68 @@ def check_Prize(prize):
 
 
 if __name__ == "__main__":
+    # Assigns board and prizes
+    game = True
     board = []
     prizes = ["[ Puzzle ]", "[ Poster ]",
               "[  Ball  ]", "[  Doll  ]", "[  Game  ]"]
-    puzzle = 0
-    poster = 0
-    ball = 0
-    doll = 0
-    game = 0
-    pennies = 10
-    endMessage = ""
+    while game == True:
+        # Assign amount of prizes hit, amount of pennies and message at the end
+        puzzle = 0
+        poster = 0
+        ball = 0
+        doll = 0
+        game = 0
+        pennies = 10
+        endMessage = ""
 
-    for x in range(5):
-        board.append(["[        ]"] * 5)
+        for x in range(5):
+            board.append(["[        ]"] * 5)
+        # Creates a secret prize board with all the prizes
+        prizeBoard = copy.deepcopy(board)
+        # Assigns prizes on prize board
+        assignPrizes(prizes, prizeBoard)
 
-    prizeBoard = copy.deepcopy(board)
+        print_board(board)
 
-    assignPrizes(prizes, prizeBoard)
-
-    print_board(board)
-
-    while pennies > 0:
-        print()
-        posX = random.randint(0, 4)
-        posY = random.randint(0, 4)
-
-        while prizeBoard[posX][posY] == "taken":
+        while pennies > 0:
+            print()
+            # Selects a random point
             posX = random.randint(0, 4)
             posY = random.randint(0, 4)
 
-        if prizeBoard[posX][posY] != "[        ]":
-            win = check_Prize(prizeBoard[posX][posY])
-            print("You hit a", win+"!\n")
-            board[posX][posY] = prizeBoard[posX][posY]
-            prizeBoard[posX][posY] = "taken"
-        else:
-            print("You hit nothing!\n")
-            board[posX][posY] = "[  NONE  ]"
-            prizeBoard[posX][posY] = "taken"
+            # Checks if point on board has already been hit by a penny
+            while prizeBoard[posX][posY] == "taken":
+                posX = random.randint(0, 4)
+                posY = random.randint(0, 4)
+            # If you hit something, then displays message and writes it on the board
+            if prizeBoard[posX][posY] != "[        ]":
+                win = check_Prize(prizeBoard[posX][posY])
+                print("You hit a", win+"!\n")
+                board[posX][posY] = prizeBoard[posX][posY]
+                # Makes sure that the spot will not be hit again
+                prizeBoard[posX][posY] = "taken"
+            # If you hit nothing, then displays message and writes it on the board
+            else:
+                print("You hit nothing!\n")
+                board[posX][posY] = "[  NONE  ]"
+                # Makes sure that the spot will not be hit again
+                prizeBoard[posX][posY] = "taken"
 
-        pennies -= 1
-        print_board(board)
+            pennies -= 1
+            print_board(board)
 
-    if endMessage == "":
-        endMessage += "\nYou didn't get any prizes : (\nBetter luck next time!"
+        # If you didn't hit three prizes, you get a lose message
+        if endMessage == "":
+            endMessage += "\nYou didn't get any prizes : ( Better luck next time!"
 
-    print(endMessage)
+        # Lists the amount of items that you hit and if you won any prizes
+        print("You hit", puzzle, "puzzles")
+        print("You hit", poster, "posters")
+        print("You hit", ball, "balls")
+        print("You hit", doll, "dolls")
+        print("You hit", game, "games")
+        print(endMessage)
+
+        # Asks the user if they want to play Penny Pitch again
+        game = goAgain()
