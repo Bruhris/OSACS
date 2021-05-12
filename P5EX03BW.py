@@ -7,6 +7,7 @@
 
 import random
 
+
 def show_rules():
     print("*** Rock-Paper-Scissors ***\n")
     print('Rules:   Each player chooses either rock, paper or scissors.')
@@ -15,17 +16,23 @@ def show_rules():
     print('                 scissors cuts paper   -> scissors wins')
     print('                 paper covers rock     -> paper wins\n')
 
+
 def get_player_choice():
     choice = input('Player choice: ')
+    while choice.lower() != 'rock' and choice.lower() != 'paper' and choice.lower() != 'scissors':
+        print("That is an invalid input")
+        choice = input('Player choice: ')
     return choice
+
 
 def get_computer_choice():
-    options = ['rock','paper','scissors']
+    options = ['rock', 'paper', 'scissors']
     choice = random.choice(options)
-    print('Computer choice:',choice)
+    print('Computer choice:', choice)
     return choice
 
-def declare_winner(p,c):
+
+def declare_winner(p, c):
     if p == 'rock':
         if c == 'scissors':
             w = 'player'
@@ -47,8 +54,7 @@ def declare_winner(p,c):
             w = 'computer'
         else:
             w = 'Draw'
-    print('Winner:',w)
-
+    print('Winner:', w)
 
 
 def play_game():
@@ -63,5 +69,5 @@ def main():
 
 
 if __name__ == "__main__":
-    #runs all code under main function
+    # runs all code under main function
     main()
