@@ -1,0 +1,2 @@
+
+        check = checkSpace(pos)
