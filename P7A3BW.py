@@ -1,3 +1,10 @@
+# Boris Wang
+# Assignment 3 - Penny Pitch
+# Computer Science 20, blk 3
+# May 19, 2021
+
+# This program is my own work - BW
+
 import random
 import copy
 
@@ -25,10 +32,10 @@ def goAgain():
     # If no, will end the program
     if choice.lower() == 'n':
         print("See you next time!")
-        return True
+        return False
     # If yes, will continue the program
     else:
-        return False
+        return True
 
 
 def print_board(board):
@@ -69,11 +76,11 @@ def check_Prize(prize):
 if __name__ == "__main__":
     # Assigns board and prizes
     game = True
-    board = []
     prizes = ["[ Puzzle ]", "[ Poster ]",
               "[  Ball  ]", "[  Doll  ]", "[  Game  ]"]
     while game == True:
         # Assign amount of prizes hit, amount of pennies and message at the end
+        board = []
         puzzle = 0
         poster = 0
         ball = 0
@@ -88,8 +95,6 @@ if __name__ == "__main__":
         prizeBoard = copy.deepcopy(board)
         # Assigns prizes on prize board
         assignPrizes(prizes, prizeBoard)
-
-        print_board(board)
 
         while pennies > 0:
             print()
@@ -118,17 +123,54 @@ if __name__ == "__main__":
             pennies -= 1
             print_board(board)
 
-        # If you didn't hit three prizes, you get a lose message
-        if endMessage == "":
-            endMessage += "\nYou didn't get any prizes : ( Better luck next time!"
-
-        # Lists the amount of items that you hit and if you won any prizes
-        print("You hit", puzzle, "puzzles")
+        # Lists the amount of items that you hit
+        print("\nYou hit", puzzle, "puzzles")
         print("You hit", poster, "posters")
         print("You hit", ball, "balls")
         print("You hit", doll, "dolls")
         print("You hit", game, "games")
-        print(endMessage)
 
-        # Asks the user if they want to play Penny Pitch again
+        # Asks the user if they want to use some of their hits to convert to full prizes
+        convert = input(
+            "\nDo you want to convert ALL of the prizes you hit into full prizes? (Y or N)\n*WARNING: THIS WILL FOREIT ALL OF YOUR CURRENT PRIZES*\n")
+        while convert.lower() != 'y' and convert.lower() != 'n':
+            print("That is invalid!")
+            convert = input(
+                "Do you want to convert ALL of the prizes you hit into full prizes? (Y or N)\n*WARNING: THIS WILL FOREIT ALL OF YOUR CURRENT PRIZES*\n")
+        if convert.lower() == 'y':
+            # Forfeits all other prizes
+            endMessage = ''
+            # Adds up the total prize that the player hit
+            total = puzzle + poster + ball + doll + game
+            # Checks to see if the user has 3 or more points, which is the minimum amount of points to redeems a full prize
+            while total >= 3:
+                print("You have", total, "points")
+                select = input(
+                    "What prize do you want to get? (PUZZLE, POSTER, BALL, DOLL, GAME or EXIT) ")
+                while select.lower() != "puzzle" and select.lower() != "poster" and select.lower() != "ball" and select.lower() != "doll" and select.lower() != "game" and select.lower() != "exit":
+                    print("That is invalid!")
+                    select = input(
+                        "What prize do you want to get? (PUZZLE, POSTER, BALL, DOLL, GAME or EXIT) ")
+                total -= 3
+                # Checks to see what prize the user picked and adds it to the end message
+                if select.lower() == "puzzle":
+                    endMessage += "\nYou got a Puzzle!"
+                elif select.lower() == "poster":
+                    endMessage += "\nYou got a Poster!"
+                elif select.lower() == "ball":
+                    endMessage += "\nYou got a Ball!"
+                elif select.lower() == "doll":
+                    endMessage += "\nYou got a Doll!"
+                elif select.lower() == "game":
+                    endMessage += "\nYou got a Game!"
+                # If the user wants to stop converting, type exit to leave
+                elif select.lower() == "exit":
+                    break
+
+        # If you didn't hit three prizes, you get a lose message
+        if endMessage == "":
+            endMessage += "\nYou didn't get any prizes : ( Better luck next time!"
+
+        # Displays what prizes they won and asks the user if they want to play Penny Pitch again
+        print(endMessage+"\n")
         game = goAgain()
