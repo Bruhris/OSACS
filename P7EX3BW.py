@@ -1,3 +1,10 @@
+# Boris Wang
+# Exercise 3 - Tic Tac Toe in Python
+# Computer Science 20, blk 3
+# May 19, 2021
+
+# This program is my own work - BW
+
 import random
 
 
