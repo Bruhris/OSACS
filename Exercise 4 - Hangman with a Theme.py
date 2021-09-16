@@ -39,7 +39,7 @@ def get_guess (already_guessed):
             return guess
 
 def main():
-    secret_words = ['apple', 'orange', 'strawberry', 'banana', 'watermelon', 'peach']
+    secret_words = ['apple', 'orange', 'strawberry', 'banana', 'watermelon', 'peach','blackberries','cantaloupe','cherries', 'grapes','mango','pineapple','tangerine']
     secret_word = random.choice(secret_words)
     missed_letter_count = len(secret_word)
     missed_letters = ''
