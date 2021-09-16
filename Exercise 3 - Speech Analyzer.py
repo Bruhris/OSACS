@@ -1,3 +1,11 @@
+# * ***********************************************************************
+# Boris Wang
+# Exercise 1 - Leap Year
+# Computer Science 30 - Block 6
+# September 13, 2021
+
+# This program is my own work - BW
+
 import string
 
 words_e = 0
@@ -18,5 +26,5 @@ num_words = len(text_words)
 if words_e != 0:
     percent = words_e/num_words * 100
 
-print('Your text contains', num_words,'of which',words_e,'('+str(percent)+'%) contain an "e".')
-
+print('Your text contains', num_words, 'of which',
+      words_e, '('+str(percent)+'%) contain an "e".')
