@@ -2,14 +2,14 @@
 # Boris Wang
 # Exercise 1 - Leap Year
 # Computer Science 30 - Block 6
-# September 13, 2021
+# September 16, 2021
 
 # This program is my own work - BW
 
 import random
+import time
 
 def display_game(missed_letters, correct_letters, secret_word):
-    # this function prints out the missed letters and the word with blanks and letters
 
     print('Missed letters:', end=' ')
     for letter in missed_letters:
@@ -19,47 +19,47 @@ def display_game(missed_letters, correct_letters, secret_word):
     blanks = '_' * len(secret_word)
 
     for i in range (len(secret_word)):
-        # replace blanks with correctly guessed letters
         if secret_word[i] in correct_letters:
             blanks = blanks [:i] + secret_word[i] + blanks [i+1:]
     for letter in blanks:
-        #show the secret work with the spaces in between each letter
         print(letter, end=' ')
     print()
 
 def get_guess (already_guessed):
-    # this function will return the letter the player enters ensuring that it is a different letter from before
     while True:
-        print('Guess a letter: ')
-        guess = input()
+        guess = input('Guess a letter: ')
         guess = guess.lower()
         if len(guess) != 1:
-            print('Please enter a single letter.')
+            print('You entered more than one letter!')
         elif guess in already_guessed:
-            print('You have already guessed that letter. Choose again.')
+            print('You have already guessed that letter! Try again.')
         elif guess not in 'abcdefghijklmnopqrstuvwxyz':
-            print('Please enter a LETTER.')
+            print('Hey! That is not a letter!')
         else:
             return guess
 
 def main():
     secret_words = ['apple', 'orange', 'strawberry', 'banana', 'watermelon', 'peach']
     secret_word = random.choice(secret_words)
-    missed_letter_count = 7
+    missed_letter_count = len(secret_word)
     missed_letters = ''
     correct_letters = ''
     game_is_done = False
 
-    print("Welcome to Boris' Hangman Game!/nThe theme of this hangman is fruit!")
+    print("Welcome to Boris' Hangman Game!")
+    time.sleep(2)
+    print("The theme of this hangman is: Fruit!")
+    time.sleep(2)
+    print("Lets try guessing this word!")
+    time.sleep(1)
+
     while True:
         display_game(missed_letters, correct_letters, secret_word)
-        # let the player enter a letter
         guess = get_guess(missed_letters + correct_letters)
 
         if guess in secret_word:
             correct_letters = correct_letters + guess
 
-            #Check if the player has won
             found_all_letters = True
             for i in range (len(secret_word)):
                 if secret_word[i] not in correct_letters:
@@ -70,11 +70,9 @@ def main():
                 game_is_done = True
 
         else:
-            missed_letters = missed_letters + guess
+            missed_letters += guess
 
-            # check if the player has guessed too many times and lost
-
-            if len(missed_letters) == missed_letter_count - 1:
+            if len(missed_letters) == missed_letter_count:
                 display_game(missed_letters, correct_letters, secret_word)
                 print('You have run out of guesses!\nAfter ' +
                     str(len(missed_letters)) + ' missed guesses and ' +
@@ -82,14 +80,17 @@ def main():
                 game_is_done = True
 
         if game_is_done:
-            again = input("Do you want to play again? (Y or N)") 
+            again = input("Do you want to play again? (Y or N): ") 
+            while again.lower() != 'n' and again.lower() != 'y':
+                print("That is an invalid option!")
+                again = input("Do you want to play again? (Y or N): ") 
             if again.lower() == 'n':
                 print('See you next time')
                 break
             else:
-                secret_words = ['apple', 'orange', 'strawberry', 'banana', 'watermelon', 'peach']
+                secret_words = ['apple', 'orange', 'strawberry', 'banana', 'watermelon', 'peach','blackberries','cantaloupe','cherries', 'grapes','mango','pineapple','tangerine']
                 secret_word = random.choice(secret_words)
-                missed_letter_count = 7
+                missed_letter_count = len(secret_word)
                 missed_letters = ''
                 correct_letters = ''
                 game_is_done = False
