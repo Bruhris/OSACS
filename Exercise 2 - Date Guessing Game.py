@@ -35,7 +35,7 @@ def guess_game(first = calendar(month_names, num_days_in_month)):
 
 
 def is_earlier(guess = 10):
-   return int(input("{}: 1 - earlier, 2 - later, 3 - equal?: ".format(guess)))
+   return int(input("{}: 1 - earlier, 2 - later, 3 - equal?: ".format(guess))) # Asks the user for 
 
 
 if __name__ == '__main__':
