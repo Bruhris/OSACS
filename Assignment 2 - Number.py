@@ -26,7 +26,6 @@ def fibonacci(arr):
             fibonacci_nums.append(num)
 
 
-
 def prime(arr):
     for num in range(2, len(arr)-1):
         if num > 1:
@@ -50,5 +49,5 @@ def main():
             print(number)
             
 
-
-main()
+if __name__ == "__main__":
+    main()

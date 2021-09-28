@@ -6,7 +6,7 @@ def insertion_sort(arr):
             arr[j + 1] = arr[j] # If so, replace lesser element with greater element
             j -= 1 # Reduces the value of j to compare to elements before and continues till it gets to last element or the element is in the correct spot
         arr[j + 1] = key # Replaces the key value in the correct position after new element is sorted in
-        print(arr)
+        print("Iteration", str(i+1)+":", arr)
     return arr
 
 arr = [89, 2, 71, 37, 11, 59, 97, 83, 5, 47, 13, 67,

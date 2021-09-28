@@ -4,7 +4,7 @@ def bubble_sort(arr):
         for j in range(n-i-1): # -1 is to not compare outside of array and i is for the number of elements already sorted
             if arr[j] > arr[j+1]: # Compares the element next to it and if it is less than j value, will swap
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-        print(arr)
+        print("Iteration", str(i+1)+":", arr)
     return arr
 
 arr = [89, 2, 71, 37, 11, 59, 97, 83, 5, 47, 13, 67,

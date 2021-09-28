@@ -6,7 +6,7 @@ def selection_sort(arr):
                 min_idx = j           # Assign the lower value index as the minimum index
      
         arr[i], arr[min_idx] = arr[min_idx], arr[i] # Swaps the beginning of sorted array with the next smallest value
-        print(arr)
+        print("Iteration", str(i+1)+":", arr)
 
 arr = [89, 2, 71, 37, 11, 59, 97, 83, 5, 47, 13, 67,
        7, 19, 3, 17, 31, 43, 29, 41, 23, 53, 61, 73, 79]
