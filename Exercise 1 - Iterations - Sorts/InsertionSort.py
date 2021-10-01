@@ -1,3 +1,11 @@
+# * ***********************************************************************
+# Boris Wang
+# Exercise 1 - Leap Year
+# Computer Science 30 - Block 6
+# September 25, 2021
+
+# This program is my own work - BW
+
 def insertion_sort(arr):
     for i in range(1, len(arr)): # Divides the array into sorted and unsorted (Leave atleast one element in array in beginning)
         key = arr[i] # Assigns the beginning of sorted subarray as key

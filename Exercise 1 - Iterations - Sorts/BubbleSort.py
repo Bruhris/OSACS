@@ -1,3 +1,11 @@
+# * ***********************************************************************
+# Boris Wang
+# Exercise 1 - Leap Year
+# Computer Science 30 - Block 6
+# September 25, 2021
+
+# This program is my own work - BW
+
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n): # Goes through the whole array

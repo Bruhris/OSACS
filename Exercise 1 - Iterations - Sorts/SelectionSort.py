@@ -1,3 +1,11 @@
+# * ***********************************************************************
+# Boris Wang
+# Exercise 1 - Leap Year
+# Computer Science 30 - Block 6
+# September 25, 2021
+
+# This program is my own work - BW
+
 def selection_sort(arr):
     for i in range(len(arr)): # Goes through the whole array
         min_idx = i           # Assigns the index value of beginning of sorted array
