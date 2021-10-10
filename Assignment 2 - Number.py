@@ -43,29 +43,31 @@ def main():
     print(sort(data))
     print("You are missing the following numbers from the data: ")
 
+    nums_missing = []
     for number in range(101):
         if number not in data:
             print(number, end=' ')
-            nums_missing = 
+            nums_missing.append(number)
     
-    add = input("Do you want to add them to the data or leave it be? (Y or N)").lower()
-    while add not in 'yn':
+    add = input("\nDo you want to add them to the data or leave it be? (A or L) ").lower()
+    while add not in 'al':
         print("That input is invalid")
-        add = input("Do you want to add them to the data or leave it be? (Y or N)").lower()
-    if add == 'y':
-        data.append
+        add = input("Do you want to add them to the data or leave it be? (A or L) ").lower()
+    if add == 'a':
+        data.extend(nums_missing)
+        sort(data)
     while True:
-        choice = input("\nDo you want to print the prime numbers of the data, the Fibonacci numbers or do you want to quit (P or F or E)? ").lower()
+        choice = input("Do you want to print the prime numbers of the data, the Fibonacci numbers or do you want to quit? (P or F or E) ").lower()
         while choice not in 'pfe':
             print("That input is invalid")
-            choice = input("Do you want to print the prime numbers of the data or the Fibonacci numbers or do you want to quit (P or F or E)? ").lower()
+            choice = input("Do you want to print the prime numbers of the data, the Fibonacci numbers or do you want to quit? (P or F or E) ").lower()
         if choice == 'p':
             prime(data)
-            print("Within your data, there are",len(prime_nums),"prime numbers:")
+            print("Within your data (starting from the third term), there are",len(prime_nums),"prime numbers:")
             print(str(prime_nums)[1:-1])
-        elif choice == 'p':
+        elif choice == 'f':
             fibonacci(data)
-            print("Within your data, there are",len(fibonacci_nums),"fibonaccci numbers:")
+            print("Within your data (starting from the third term), there are",len(fibonacci_nums),"fibonaccci numbers:")
             print(str(fibonacci_nums)[1:-1])
         else:
             print("Thanks for using my program")
