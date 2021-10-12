@@ -11,8 +11,7 @@ import math # import libraries
 # Declare lists for the prime, fibonacci numbers and the data that is being used
 prime_nums = []
 fibonacci_nums = []
-data = [51, 68, 15, 90, 78, 97, 14, 56, 81, 79, 26, 80, 48, 64, 37, 88, 94, 91, 6, 44, 49, 9, 34, 85, 25, 95, 67, 11, 47, 58, 65, 50, 61, 100, 36, 40, 63, 5, 89, 57, 45, 53, 30, 4, 69, 71, 82, 77, 59, 74, 75, 10, 27, 72, 86, 24, 31, 52, 3,
-        23, 41, 46, 32, 38, 21, 62, 55, 83, 43, 16, 98, 33, 12, 7, 60, 66, 54, 18, 92, 29, 35, 8, 20, 96, 1, 76, 17, 93, 73, 84]
+data = []
 
 def sort(arr): # Uses a bubble sort to sort the array given
     for i in range(len(arr)):
@@ -40,10 +39,31 @@ def perfect_square(num): # Checks if number is perfect square
     sqrt_num = int(math.sqrt(num))
     return pow(sqrt_num,2) == num
 
+def user_choice():
+    print("Welcome to Boris' Data Sorter Program!")
+    choice = input("Do you want to add your own data to the program or do you want to use Bob's weird data (1 or 2)? ")
+    while choice not in '12':
+        print("That is an invalid input!")
+        choice = input("Do you want to add your own data to the program or do you want to use Bob's weird data (1 or 2)? ")
+    if choice == '1':
+        temp_list = []
+        while True:
+            value = input("Enter the value you want to add to the data or type 'Q' (Make sure it is an single integer only!)")
+            while value.isdigit() == False and value.lower() != 'q':
+                print("That input is invalid")
+                value = input("Enter the value you want to add to the data or type 'Q' (Make sure it is an single integer only!)")
+            if value.lower() == 'q':
+                return temp_list
+            temp_list.append(int(value))       
+    else:
+        return [51, 68, 15, 90, 78, 97, 14, 56, 81, 79, 26, 80, 48, 64, 37, 88, 94, 91, 6, 44, 49, 9, 34, 85, 25, 95, 67, 11, 47, 58, 65, 50, 61, 100, 36, 40, 63, 5, 89, 57, 45, 53, 30, 4, 69, 71, 82, 77, 59, 74, 75, 10, 27, 72, 86, 24, 31, 52, 3,
+        23, 41, 46, 32, 38, 21, 62, 55, 83, 43, 16, 98, 33, 12, 7, 60, 66, 54, 18, 92, 29, 35, 8, 20, 96, 1, 76, 17, 93, 73, 84]
+
 def main():
+    data = user_choice()
     # Prints the data after it is sorted using the sort() function and what data is missing from the list
     print(sort(data))
-    print("You are missing the following numbers from the data: ")
+    print("You are missing the following numbers from the 'original' data: ")
 
     # Adds the missing numbers to a list called nums_missing
     nums_missing = []

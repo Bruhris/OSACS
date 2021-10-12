@@ -9,8 +9,47 @@
 import random
 import time
 
+hangman_pics = ['''
+ +---+
+     |
+     |
+     |
+    ===''', '''
+ +---+
+ O   |
+     |
+     |
+    ===''', '''
+ +---+
+ O   |
+ |   |
+     |
+    ===''', '''
+ +---+
+ O   |
+/|   |
+     |
+    ===''', '''
+ +---+
+ O   |
+/|\  |
+     |
+    ===''', '''
+ +---+
+ O   |
+/|\  |
+/    |
+    ===''', '''
+ +---+
+ O   |
+/|\  |
+/ \  |
+    ===''']
+
 def display_game(missed_letters, correct_letters, secret_word):
 
+    print(hangman_pics[len(missed_letters)])
+    print()
     print('Missed letters:', end=' ')
     for letter in missed_letters:
         print(letter, end=' ')
@@ -41,17 +80,14 @@ def get_guess (already_guessed):
 def main():
     secret_words = ['apple', 'orange', 'strawberry', 'banana', 'watermelon', 'peach','blackberries','cantaloupe','cherries', 'grapes','mango','pineapple','tangerine']
     secret_word = random.choice(secret_words)
-    missed_letter_count = len(secret_word)
+    missed_letter_count = 6
     missed_letters = ''
     correct_letters = ''
     game_is_done = False
 
     print("Welcome to Boris' Hangman Game!")
-    time.sleep(2)
     print("The theme of this hangman is: Fruit!")
-    time.sleep(2)
     print("Lets try guessing this word!")
-    time.sleep(1)
 
     while True:
         display_game(missed_letters, correct_letters, secret_word)
