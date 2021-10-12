@@ -1,28 +1,28 @@
 def binarySearch (arr, l, r, x):
+
+    if r >= l: # If the list is not empty
   
-    # Check base case
-    if r >= l:
-  
-        mid = l + (r - l) // 2
-  
-        # If element is present at the middle itself
-        if arr[mid] == x:
+        mid = l + (r - l) // 2 # Gets the middle element of the given array
+
+        print("I current checking index",mid,"of the list")
+
+        if arr[mid] == x: # If it finds the value, will return the index value
+            print("The index of the value you are looking for in the sorted list, is in index",mid)
             return mid
           
-        # If element is smaller than mid, then it 
-        # can only be present in left subarray
         elif arr[mid] > x:
-            return binarySearch(arr, l, mid-1, x)
+            return binarySearch(arr, l, mid-1, x) # If the index value is greater than the find_value, then the index must be behind the mid
+                                                  # index and will search the lower half of the list
   
-        # Else the element can only be present 
-        # in right subarray
         else:
-            return binarySearch(arr, mid + 1, r, x)
+            return binarySearch(arr, mid + 1, r, x) # If the index value is less than the find_value, then the index must be infront of the mid
+                                                    # index and will search the upper half of the list
   
     else:
-        # Element is not present in the array
-        return -1
+        return -1 # If the list is empty, return -1
 
 arr = [15, 22, 75, 5, 29, 37, 23, 18, 44, 2, 20, 19, 97, 71, 93, 25, 13, 4, 10, 14, 41, 8, 56]
+arr.sort()
+print(arr)
 find_value = 44
 binarySearch(arr, 0, len(arr), find_value)

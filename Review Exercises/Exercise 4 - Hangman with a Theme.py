@@ -66,7 +66,7 @@ def main():
                     found_all_letters = False
                     break
             if found_all_letters:
-                print('Yes! The secret word is ' + secret_word + '"! You have won"')
+                print('Yes! The secret word is "' + secret_word + '"! You have won"')
                 game_is_done = True
 
         else:
