@@ -12,7 +12,7 @@ import time
 import re
 import statistics
 
-# Creates a regular expression pattern object that contains a certain pattern of words that can be searched for
+# Creates a regular expression pattern object that contains a certain pattern of words that can be searched for within a string
 r = re.compile(r"[^a-zA-Z0-9-\s\.]")
 
 def sort(arr): # Uses a bubble sort to sort the array given
@@ -24,7 +24,7 @@ def sort(arr): # Uses a bubble sort to sort the array given
 
 def fibonacci(arr): # Uses an algorithm to determine what numbers of an array are fibonacci numbers
     fib_nums = []
-    for num in range(len(arr)-1):
+    for num in range(len(arr)):
         if arr[num] == 0:
             fib_nums.append(arr[num])
         elif arr[num] > 0:
@@ -35,7 +35,7 @@ def fibonacci(arr): # Uses an algorithm to determine what numbers of an array ar
 
 def prime(arr): # Uses an algorithm to determine what numbers of an array are prime numbers
     prime_nums = []
-    for num in range(len(arr)-1):
+    for num in range(len(arr)):
         if arr[num] > 1:
             for k in range(2, arr[num]):
                 if arr[num] % k == 0:
@@ -49,8 +49,10 @@ def perfect_square(num): # Checks if number is perfect square
     return pow(sqrt_num,2) == num
 
 def user_choice():
+    # Intro
     print("Welcome to Boris' Data Sorter Program!")
     time.sleep(1)
+    # Asks user for choice of data
     choice = input("Do you want to add your own data to the program or do you want to use Bob's weird data (1 or 2)? ")
     while choice not in '12':
         print("That is an invalid input!")
@@ -67,9 +69,21 @@ def user_choice():
                 print("The data was invalid, try again!")
 
     else:
+        # Uses Bob's data
         return [51, 68, 15, 90, 78, 97, 14, 56, 81, 79, 26, 80, 48, 64, 37, 88, 94, 91, 6, 44, 49, 9, 34, 85, 25, 95, 67, 11, 47, 58, 65, 50, 61, 100, 36, 40, 63, 5, 89, 57, 45, 
                 53, 30, 4, 69, 71, 82, 77, 59, 74, 75, 10, 27, 72, 86, 24, 31, 52, 3, 23, 41, 46, 32, 38, 21, 62, 55, 83, 43, 16, 98, 33, 12, 7, 60, 66, 54, 18, 92, 29, 35, 8, 20, 
                 96, 1, 76, 17, 93, 73, 84]
+
+def fun_facts(data):
+    # Prints some fun facts about the list using statistics library methods
+    print("Here are some fun facts about your data!: ")
+    time.sleep(1)
+    print("~The average of your data would be:",round(statistics.mean(data),2))
+    time.sleep(2)
+    print("~The mode of your data would be:", round(statistics.mode(data),2))
+    time.sleep(2)
+    print("~The median of your data would be:", round(statistics.median(data),2))
+    time.sleep(2)
 
 def main():
     # Declare a list for data input 
@@ -94,13 +108,20 @@ def main():
         print("That input is invalid")
         add = input("Do you want to add them to the data or leave it be (A or L)? ").lower()
     if add == 'a':
-        data.extend(nums_missing)
+        data.extend(nums_missing) # Adds missing numbers to the data and sorts it again
         sort(data)
-    # Prints some fun facts about the list using statistics library methods
-    print("Here are some fun facts about your data!")
-    print("The average of your data would be",round(statistics.mean(data),2))
-    print("The mode of your data would be", round(statistics.mode(data),2))
-    print("The median of your data would be", round(statistics.median(data),2))
+    duplicates = input("Do you want to remove duplicates from the data (Y or N)? ").lower()
+    while duplicates not in 'yn':
+        print("That input is invalid")
+        duplicates = input("Do you want to remove duplicates from the data (Y or N)? ").lower()
+    if duplicates == 'y':
+        # Removes duplicates from keys by converting to dictionary, which can't have duplicate keys and converts bac 
+        data = list(dict.fromkeys(data))
+    
+    print("Here is your new data!")
+    print(str(data)[1:-1])
+
+    fun_facts(data)
 
     while True:
         # Asks the user if they want to see the prime numbers, fibonacci numbers or if they want to exit the program
@@ -108,15 +129,15 @@ def main():
         while choice not in 'pfe':
             print("That input is invalid")
             choice = input("Do you want to print the prime numbers of the data, the Fibonacci numbers or do you want to quit? (P or F or E) ").lower()
-        if choice == 'p':
+        if choice == 'p': # Prints the prime numbers of data
             prime_nums = prime(data)
             print("Within your data, there are",len(prime_nums),"prime numbers:")
             print(str(prime_nums)[1:-1])
         elif choice == 'f':
-            fib_nums = fibonacci(data)
+            fib_nums = fibonacci(data) # Prints the fibonnaci numbers of data
             print("Within your data, there are",len(fib_nums),"fibonaccci numbers:")
             print(str(fib_nums)[1:-1])
-        else:
+        else: #Exits program
             print("Thanks for using my program")
             break
 
