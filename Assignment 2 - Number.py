@@ -25,8 +25,11 @@ def sort(arr): # Uses a bubble sort to sort the array given
 def fibonacci(arr): # Uses an algorithm to determine what numbers of an array are fibonacci numbers
     fib_nums = []
     for num in range(len(arr)-1):
-        if perfect_square(5*pow(arr[num],2)-4) or perfect_square(5*pow(arr[num],2)+4):
+        if arr[num] == 0:
             fib_nums.append(arr[num])
+        elif arr[num] > 0:
+            if perfect_square(5*pow(arr[num],2)-4) or perfect_square(5*pow(arr[num],2)+4):
+                fib_nums.append(arr[num])
     return fib_nums
 
 
@@ -56,7 +59,7 @@ def user_choice():
         while True:
             try:
                 # Will test the data given by the user and if it is not entirely made up of integers, will raise a ValueError
-                data = input("Enter the list of integers you want added to your data: ")
+                data = input("Enter the list of integers you want added to your data (Only one line!): ")
                 data = r.sub(" ",data).split()
                 data = [int(x) for x in data]
                 return data
@@ -69,15 +72,11 @@ def user_choice():
                 96, 1, 76, 17, 93, 73, 84]
 
 def main():
-    # Declare variables 
-
+    # Declare a list for data input 
     data = []
-    neg = 0
-    pos = 0
-
     data = user_choice()
-    # Prints the data after it is sorted using the sort() function and what data is missing from the list
 
+    # Prints the data after it is sorted using the sort() function and what data is missing from the list compared to the first 100 natural numbers
     print("This is your data after being sorted!")
     print(sort(data))
     print("Compared to the first 100 natural numbers, you are missing the following numbers: ")
@@ -97,10 +96,11 @@ def main():
     if add == 'a':
         data.extend(nums_missing)
         sort(data)
+    # Prints some fun facts about the list using statistics library methods
     print("Here are some fun facts about your data!")
     print("The average of your data would be",round(statistics.mean(data),2))
     print("The mode of your data would be", round(statistics.mode(data),2))
-    print("The median of your data would be", round(statistics.mean(data),2))
+    print("The median of your data would be", round(statistics.median(data),2))
 
     while True:
         # Asks the user if they want to see the prime numbers, fibonacci numbers or if they want to exit the program
@@ -110,7 +110,7 @@ def main():
             choice = input("Do you want to print the prime numbers of the data, the Fibonacci numbers or do you want to quit? (P or F or E) ").lower()
         if choice == 'p':
             prime_nums = prime(data)
-            print("Within your data, there are",len(prime_nums),"fibonaccci numbers:")
+            print("Within your data, there are",len(prime_nums),"prime numbers:")
             print(str(prime_nums)[1:-1])
         elif choice == 'f':
             fib_nums = fibonacci(data)
