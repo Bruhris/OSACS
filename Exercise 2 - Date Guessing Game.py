@@ -26,10 +26,10 @@ first = calendar(month_names, num_days_in_month) # Creates first list that conta
 
 def guess_game(first = calendar(month_names, num_days_in_month), count = 1):
     if count == 1:
-        mid = random.randint(0,len(first)-1) # Gets the middle index of the list filled with the dates
+        mid = random.randint(0,len(first)-1)
         count-=1
     else:
-        mid = len(first)//2
+        mid = len(first)//2 # Gets the middle index of the list filled with the dates
 
     val = is_earlier(first[mid]) # Checks if the guessed date is earlier, later or equal to the players guessed day
 
