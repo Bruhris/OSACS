@@ -1,3 +1,12 @@
+# * ***********************************************************************
+# Boris Wang
+# Exercise 1 - Leap Year
+# Computer Science 30 - Block 6
+# October 14, 2021
+
+# This program is my own work - BW
+
+
 def linear_search(arr, length_arr, value):
  
     for i in range(length_arr): # Goes through the whole list and checks if value is in list

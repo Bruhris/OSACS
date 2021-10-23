@@ -1,3 +1,12 @@
+# * ***********************************************************************
+# Boris Wang
+# Exercise 1 - Leap Year
+# Computer Science 30 - Block 6
+# October 24, 2021
+
+# This program is my own work - BW
+
+
 def binarySearch (arr, l, r, x):
 
     if r >= l: # If the list is not empty
@@ -19,7 +28,7 @@ def binarySearch (arr, l, r, x):
                                                     # index and will search the upper half of the list
   
     else:
-        return -1 # If the list is empty, return -1
+        return -1 # If the value is not in the list, then return -1
 
 arr = [15, 22, 75, 5, 29, 37, 23, 18, 44, 2, 20, 19, 97, 71, 93, 25, 13, 4, 10, 14, 41, 8, 56]
 arr.sort()

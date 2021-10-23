@@ -1,3 +1,11 @@
+# * ***********************************************************************
+# Boris Wang
+# Exercise 1 - Leap Year
+# Computer Science 30 - Block 6
+# October 16, 2021
+
+# This program is my own work - BW
+
 # Day of the Year guessing game
 
 import random
@@ -25,7 +33,7 @@ first = calendar(month_names, num_days_in_month) # Creates first list that conta
 
 
 def guess_game(first = calendar(month_names, num_days_in_month), count = 1):
-    if count == 1:
+    if count == 1: # For the first date, starts at a random one within the list of dates
         mid = random.randint(0,len(first)-1)
         count-=1
     else:
