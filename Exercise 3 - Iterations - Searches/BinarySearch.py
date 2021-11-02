@@ -13,7 +13,7 @@ def binarySearch (arr, low, high, x):
   
         mid = (high + low) // 2 # Gets the middle element of the given array
 
-        print("I current checking index",mid,"of the list","which is the value",arr[mid])
+        print("I am current searching index",mid,"of the list","which is the value",arr[mid])
 
         if arr[mid] == x: # If it finds the value, will return the index value
             print("The index of the value you are looking for in the sorted list, is in index",mid)
@@ -31,8 +31,8 @@ def binarySearch (arr, low, high, x):
         return -1 # If the value is not in the list, then return -1
 
 
-arr = [3, 5, 6, 8, 11, 12, 14, 15, 17, 18]
+arr = [15, 22, 75, 5, 29, 37, 23, 18, 44, 2, 20, 19, 97, 71, 93, 25, 13, 4, 10, 14, 41, 8, 56 ]
 arr.sort()
 print(arr)
-find_value = 5
+find_value = 15
 binarySearch(arr, 0, len(arr)-1, find_value)
