@@ -6,5 +6,13 @@
 
 # This program is my own work - BW
 
-with open():
+
+
+
+def main():
+    pass
+
+
+if '__name__' == '__main__':
+    main()
     

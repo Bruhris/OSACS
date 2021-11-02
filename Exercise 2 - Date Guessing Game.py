@@ -1,6 +1,6 @@
 # * ***********************************************************************
 # Boris Wang
-# Exercise 1 - Leap Year
+# Exercise 2 - Date Guessing Game
 # Computer Science 30 - Block 6
 # October 16, 2021
 

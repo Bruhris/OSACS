@@ -1,6 +1,6 @@
 # * ***********************************************************************
 # Boris Wang
-# Exercise 1 - Leap Year
+# Assignment 2 - Number
 # Computer Science 30 - Block 6
 # September 24, 2021
 

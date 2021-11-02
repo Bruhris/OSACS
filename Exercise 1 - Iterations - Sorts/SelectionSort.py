@@ -1,6 +1,6 @@
 # * ***********************************************************************
 # Boris Wang
-# Exercise 1 - Leap Year
+# Exercise 1 - Iterations - Sorts
 # Computer Science 30 - Block 6
 # September 25, 2021
 
