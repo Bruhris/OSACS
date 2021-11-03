@@ -1,0 +1,237 @@
+name	value	region
+Afghanistan	"37,466,414"	South Asia
+Albania	"3,088,385"	Europe
+Algeria	"43,576,691"	Africa
+American Samoa	"46,366"	Australia - Oceania
+Andorra	"85,645"	Europe
+Angola	"33,642,646"	Africa
+Anguilla	"18,403"	Central America
+Antigua and Barbuda	"99,175"	Central America
+Argentina	"45,864,941"	South America
+Armenia	"3,011,609"	Middle East
+Aruba	"120,917"	Central America
+Australia	"25,809,973"	Australia - Oceania
+Austria	"8,884,864"	Europe
+Azerbaijan	"10,282,283"	Middle East
+"Bahamas, The"	"352,655"	Central America
+Bahrain	"1,526,929"	Middle East
+Bangladesh	"164,098,818"	South Asia
+Barbados	"301,865"	Central America
+Belarus	"9,441,842"	Europe
+Belgium	"11,778,842"	Europe
+Belize	"405,633"	Central America
+Benin	"13,301,694"	Africa
+Bermuda	"72,084"	North America
+Bhutan	"857,423"	South Asia
+Bolivia	"11,758,869"	South America
+Bosnia and Herzegovina	"3,824,782"	Europe
+Botswana	"2,350,667"	Africa
+Brazil	"213,445,417"	South America
+British Virgin Islands	"37,891"	Central America
+Brunei	"471,103"	East Asia/Southeast Asia
+Bulgaria	"6,919,180"	Europe
+Burkina Faso	"21,382,659"	Africa
+Burma	"57,069,099"	East Asia/Southeast Asia
+Burundi	"12,241,065"	Africa
+Cabo Verde	"589,451"	Africa
+Cambodia	"17,304,363"	East Asia/Southeast Asia
+Cameroon	"28,524,175"	Africa
+Canada	"37,943,231"	North America
+Cayman Islands	"63,131"	Central America
+Central African Republic	"5,357,984"	Africa
+Chad	"17,414,108"	Africa
+Chile	"18,307,925"	South America
+China	"1,397,897,720"	East Asia/Southeast Asia
+Christmas Island	"2,205"	Australia - Oceania
+Cocos (Keeling) Islands	596	Australia - Oceania
+Colombia	"50,355,650"	South America
+Comoros	"864,335"	Africa
+"Congo, Democratic Republic of the"	"105,044,646"	Africa
+"Congo, Republic of the"	"5,417,414"	Africa
+Cook Islands	"8,327"	Australia - Oceania
+Costa Rica	"5,151,140"	Central America
+Cote d'Ivoire	"28,088,455"	Africa
+Croatia	"4,208,973"	Europe
+Cuba	"11,032,343"	Central America
+Curacao	"151,885"	Central America
+Cyprus	"1,281,506"	Europe
+Czechia	"10,702,596"	Europe
+Denmark	"5,894,687"	Europe
+Djibouti	"938,413"	Africa
+Dominica	"74,584"	Central America
+Dominican Republic	"10,597,348"	Central America
+Ecuador	"17,093,159"	South America
+Egypt	"106,437,241"	Africa
+El Salvador	"6,528,135"	Central America
+Equatorial Guinea	"857,008"	Africa
+Eritrea	"6,147,398"	Africa
+Estonia	"1,220,042"	Europe
+Eswatini	"1,113,276"	Africa
+Ethiopia	"110,871,031"	Africa
+Falkland Islands (Islas Malvinas)	"3,198"	South America
+Faroe Islands	"51,943"	Europe
+Fiji	"939,535"	Australia - Oceania
+Finland	"5,587,442"	Europe
+France	"68,084,217"	Europe
+French Polynesia	"297,154"	Australia - Oceania
+Gabon	"2,284,912"	Africa
+"Gambia, The"	"2,221,301"	Africa
+Gaza Strip	"1,957,062"	Middle East
+Georgia	"4,933,674"	Middle East
+Germany	"79,903,481"	Europe
+Ghana	"32,372,889"	Africa
+Gibraltar	"29,516"	Europe
+Greece	"10,569,703"	Europe
+Greenland	"57,799"	North America
+Grenada	"113,570"	Central America
+Guam	"168,801"	Australia - Oceania
+Guatemala	"17,422,821"	Central America
+Guernsey	"67,334"	Europe
+Guinea	"12,877,894"	Africa
+Guinea-Bissau	"1,976,187"	Africa
+Guyana	"787,971"	South America
+Haiti	"11,198,240"	Central America
+Holy See (Vatican City)	"1,000"	Europe
+Honduras	"9,346,277"	Central America
+Hong Kong	"7,263,234"	East Asia/Southeast Asia
+Hungary	"9,728,337"	Europe
+Iceland	"354,234"	Europe
+India	"1,339,330,514"	South Asia
+Indonesia	"275,122,131"	East Asia/Southeast Asia
+Iran	"85,888,910"	Middle East
+Iraq	"39,650,145"	Middle East
+Ireland	"5,224,884"	Europe
+Isle of Man	"90,895"	Europe
+Israel	"8,787,045"	Middle East
+Italy	"62,390,364"	Europe
+Jamaica	"2,816,602"	Central America
+Japan	"124,687,293"	East Asia/Southeast Asia
+Jersey	"101,476"	Europe
+Jordan	"10,909,567"	Middle East
+Kazakhstan	"19,245,793"	Central Asia
+Kenya	"54,685,051"	Africa
+Kiribati	"113,001"	Australia - Oceania
+"Korea, North"	"25,831,360"	East Asia/Southeast Asia
+"Korea, South"	"51,715,162"	East Asia/Southeast Asia
+Kosovo	"1,935,259"	Europe
+Kuwait	"3,032,065"	Middle East
+Kyrgyzstan	"6,018,789"	Central Asia
+Laos	"7,574,356"	East Asia/Southeast Asia
+Latvia	"1,862,687"	Europe
+Lebanon	"5,261,372"	Middle East
+Lesotho	"2,177,740"	Africa
+Liberia	"5,214,030"	Africa
+Libya	"7,017,224"	Africa
+Liechtenstein	"39,425"	Europe
+Lithuania	"2,711,566"	Europe
+Luxembourg	"639,589"	Europe
+Macau	"630,396"	East Asia/Southeast Asia
+Madagascar	"27,534,354"	Africa
+Malawi	"20,308,502"	Africa
+Malaysia	"33,519,406"	East Asia/Southeast Asia
+Maldives	"390,669"	South Asia
+Mali	"20,137,527"	Africa
+Malta	"460,891"	Europe
+Marshall Islands	"78,831"	Australia - Oceania
+Mauritania	"4,079,284"	Africa
+Mauritius	"1,386,129"	Africa
+Mexico	"130,207,371"	North America
+"Micronesia, Federated States of"	"101,675"	Australia - Oceania
+Moldova	"3,323,875"	Europe
+Monaco	"31,223"	Europe
+Mongolia	"3,198,913"	East Asia/Southeast Asia
+Montenegro	"607,414"	Europe
+Montserrat	"5,387"	Central America
+Morocco	"36,561,813"	Africa
+Mozambique	"30,888,034"	Africa
+Namibia	"2,678,191"	Africa
+Nauru	"9,770"	Australia - Oceania
+Nepal	"30,424,878"	South Asia
+Netherlands	"17,337,403"	Europe
+New Caledonia	"293,608"	Australia - Oceania
+New Zealand	"4,991,442"	Australia - Oceania
+Nicaragua	"6,243,931"	Central America
+Niger	"23,605,767"	Africa
+Nigeria	"219,463,862"	Africa
+Niue	"2,000"	Australia - Oceania
+Norfolk Island	"1,748"	Australia - Oceania
+Northern Mariana Islands	"51,659"	Australia - Oceania
+Norway	"5,509,591"	Europe
+Oman	"3,694,755"	Middle East
+Pakistan	"238,181,034"	South Asia
+Palau	"21,613"	Australia - Oceania
+Panama	"3,928,646"	Central America
+Papua New Guinea	"7,399,757"	East Asia/Southeast Asia
+Paracel Islands	"1,440"	East Asia/Southeast Asia
+Paraguay	"7,272,639"	South America
+Peru	"32,201,224"	South America
+Philippines	"110,818,325"	East Asia/Southeast Asia
+Pitcairn Islands	50	Australia - Oceania
+Poland	"38,185,913"	Europe
+Portugal	"10,263,850"	Europe
+Puerto Rico	"3,142,779"	Central America
+Qatar	"2,479,995"	Middle East
+Romania	"21,230,362"	Europe
+Russia	"142,320,790"	Central Asia
+Rwanda	"12,943,132"	Africa
+Saint Barthelemy	"7,116"	Central America
+"Saint Helena, Ascension, and Tristan da Cunha"	"7,915"	Africa
+Saint Kitts and Nevis	"54,149"	Central America
+Saint Lucia	"166,637"	Central America
+Saint Martin	"32,680"	Central America
+Saint Pierre and Miquelon	"5,321"	North America
+Saint Vincent and the Grenadines	"101,145"	Central America
+Samoa	"204,898"	Australia - Oceania
+San Marino	"34,467"	Europe
+Sao Tome and Principe	"213,948"	Africa
+Saudi Arabia	"34,783,757"	Middle East
+Senegal	"16,082,442"	Africa
+Serbia	"6,974,289"	Europe
+Seychelles	"96,387"	Africa
+Sierra Leone	"6,807,277"	Africa
+Singapore	"5,866,139"	East Asia/Southeast Asia
+Sint Maarten	"44,564"	Central America
+Slovakia	"5,436,066"	Europe
+Slovenia	"2,102,106"	Europe
+Solomon Islands	"690,598"	Australia - Oceania
+Somalia	"12,094,640"	Africa
+South Africa	"56,978,635"	Africa
+South Sudan	"10,984,074"	Africa
+Spain	"47,260,584"	Europe
+Sri Lanka	"23,044,123"	South Asia
+Sudan	"46,751,152"	Africa
+Suriname	"614,749"	South America
+Svalbard	"2,926"	Europe
+Sweden	"10,261,767"	Europe
+Switzerland	"8,453,550"	Europe
+Syria	"20,384,316"	Middle East
+Taiwan	"23,572,052"	East Asia/Southeast Asia
+Tajikistan	"8,990,874"	Central Asia
+Tanzania	"62,092,761"	Africa
+Thailand	"69,480,520"	East Asia/Southeast Asia
+Timor-Leste	"1,413,958"	East Asia/Southeast Asia
+Togo	"8,283,189"	Africa
+Tokelau	"1,647"	Australia - Oceania
+Tonga	"105,780"	Australia - Oceania
+Trinidad and Tobago	"1,221,047"	Central America
+Tunisia	"11,811,335"	Africa
+Turkey	"82,482,383"	Middle East
+Turkmenistan	"5,579,889"	Central Asia
+Turks and Caicos Islands	"57,196"	Central America
+Tuvalu	"11,448"	Australia - Oceania
+Uganda	"44,712,143"	Africa
+Ukraine	"43,745,640"	Europe
+United Arab Emirates	"9,856,612"	Middle East
+United Kingdom	"67,081,000"	Europe
+United States	"334,998,398"	North America
+Uruguay	"3,398,239"	South America
+Uzbekistan	"30,842,796"	Central Asia
+Vanuatu	"303,009"	Australia - Oceania
+Venezuela	"29,069,153"	South America
+Vietnam	"102,789,598"	East Asia/Southeast Asia
+Virgin Islands	"105,870"	Central America
+Wallis and Futuna	"15,851"	Australia - Oceania
+West Bank	"2,949,246"	Middle East
+Yemen	"30,399,243"	Middle East
+Zambia	"19,077,816"	Africa
+Zimbabwe	"14,829,988"	Africa

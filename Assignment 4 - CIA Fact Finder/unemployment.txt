@@ -1,0 +1,219 @@
+name	value	region
+Afghanistan	23.9	South Asia
+Albania	5.83	Europe
+Algeria	11.7	Africa
+American Samoa	29.8	Australia - Oceania
+Andorra	3.7	Europe
+Angola	6.6	Africa
+Anguilla	8	Central America
+Antigua and Barbuda	11	Central America
+Argentina	9.84	South America
+Armenia	18.9	Middle East
+Aruba	7.7	Central America
+Australia	5.16	Australia - Oceania
+Austria	7.35	Europe
+Azerbaijan	5	Middle East
+"Bahamas, The"	10.1	Central America
+Bahrain	3.6	Middle East
+Bangladesh	4.4	South Asia
+Barbados	10.1	Central America
+Belarus	0.8	Europe
+Belgium	5.36	Europe
+Belize	9	Central America
+Benin	1	Africa
+Bermuda	7	North America
+Bhutan	3.2	South Asia
+Bolivia	4	South America
+Bosnia and Herzegovina	33.28	Europe
+Botswana	20	Africa
+Brazil	11.93	South America
+British Virgin Islands	2.9	Central America
+Brunei	6.9	East Asia/Southeast Asia
+Bulgaria	5.66	Europe
+Burkina Faso	77	Africa
+Burma	4	East Asia/Southeast Asia
+Cabo Verde	9	Africa
+Cambodia	0.3	East Asia/Southeast Asia
+Cameroon	4.3	Africa
+Canada	5.67	North America
+Cayman Islands	4	Central America
+Central African Republic	6.9	Africa
+Chile	7.22	South America
+China	3.64	East Asia/Southeast Asia
+Cocos (Keeling) Islands	0.1	Australia - Oceania
+Colombia	10.5	South America
+Comoros	6.5	Africa
+"Congo, Republic of the"	36	Africa
+Cook Islands	13.1	Australia - Oceania
+Costa Rica	8.1	Central America
+Cote d'Ivoire	9.4	Africa
+Croatia	8.07	Europe
+Cuba	2.6	Central America
+Curacao	13	Central America
+Cyprus	7.07	Europe
+Czechia	2.8	Europe
+Denmark	3.05	Europe
+Djibouti	40	Africa
+Dominica	23	Central America
+Dominican Republic	5.1	Central America
+Ecuador	5.71	South America
+Egypt	7.86	Africa
+El Salvador	7	Central America
+Equatorial Guinea	8.6	Africa
+Eritrea	5.8	Africa
+Estonia	4.94	Europe
+Eswatini	28	Africa
+Ethiopia	17.5	Africa
+Falkland Islands (Islas Malvinas)	1	South America
+Faroe Islands	2.2	Europe
+Fiji	4.5	Australia - Oceania
+Finland	6.63	Europe
+France	8.12	Europe
+French Polynesia	21.8	Australia - Oceania
+Gabon	28	Africa
+Gaza Strip	27.9	Middle East
+Georgia	11.8	Middle East
+Germany	4.98	Europe
+Ghana	11.9	Africa
+Gibraltar	1	Europe
+Greece	17.3	Europe
+Greenland	9.1	North America
+Grenada	24	Central America
+Guam	4.5	Australia - Oceania
+Guatemala	2.3	Central America
+Guernsey	1.2	Europe
+Guinea	2.7	Africa
+Guyana	11.1	South America
+Haiti	40.6	Central America
+Honduras	5.6	Central America
+Hong Kong	2.93	East Asia/Southeast Asia
+Hungary	3.45	Europe
+Iceland	3.62	Europe
+India	8.5	South Asia
+Indonesia	5.31	East Asia/Southeast Asia
+Iran	11.8	Middle East
+Iraq	16	Middle East
+Ireland	4.98	Europe
+Isle of Man	1.1	Europe
+Israel	4.4	Middle East
+Italy	9.88	Europe
+Jamaica	7.72	Central America
+Japan	2.36	East Asia/Southeast Asia
+Jersey	4	Europe
+Jordan	19.1	Middle East
+Kazakhstan	4.8	Central Asia
+Kenya	40	Africa
+Kiribati	30.6	Australia - Oceania
+"Korea, North"	25.6	East Asia/Southeast Asia
+"Korea, South"	3.76	East Asia/Southeast Asia
+Kosovo	30.5	Europe
+Kuwait	1.1	Middle East
+Kyrgyzstan	3.18	Central Asia
+Laos	0.7	East Asia/Southeast Asia
+Latvia	6.14	Europe
+Lebanon	9.7	Middle East
+Lesotho	28.1	Africa
+Liberia	2.8	Africa
+Libya	30	Africa
+Liechtenstein	2.4	Europe
+Lithuania	8.4	Europe
+Luxembourg	5.36	Europe
+Macau	2	East Asia/Southeast Asia
+Madagascar	1.8	Africa
+Malawi	20.4	Africa
+Malaysia	3.3	East Asia/Southeast Asia
+Maldives	2.9	South Asia
+Mali	7.9	Africa
+Malta	0.78	Europe
+Marshall Islands	36	Australia - Oceania
+Mauritania	10.2	Africa
+Mauritius	6.65	Africa
+Mexico	3.49	North America
+"Micronesia, Federated States of"	16.2	Australia - Oceania
+Moldova	4.99	Europe
+Monaco	2	Europe
+Mongolia	8	East Asia/Southeast Asia
+Montenegro	15.82	Europe
+Montserrat	5.6	Central America
+Morocco	9.23	Africa
+Mozambique	24.5	Africa
+Namibia	34	Africa
+Nauru	23	Australia - Oceania
+Nepal	3	South Asia
+Netherlands	3.41	Europe
+New Caledonia	14.7	Australia - Oceania
+New Zealand	4.13	Australia - Oceania
+Nicaragua	6.4	Central America
+Niger	0.3	Africa
+Nigeria	16.5	Africa
+Niue	12	Australia - Oceania
+Northern Mariana Islands	11.2	Australia - Oceania
+Norway	3.72	Europe
+Pakistan	6	South Asia
+Palau	1.7	Australia - Oceania
+Panama	6.14	Central America
+Papua New Guinea	2.5	East Asia/Southeast Asia
+Paraguay	5.7	South America
+Peru	6.58	South America
+Philippines	5.11	East Asia/Southeast Asia
+Poland	5.43	Europe
+Portugal	6.55	Europe
+Puerto Rico	10.8	Central America
+Qatar	8.9	Middle East
+Romania	3.06	Europe
+Russia	4.6	Central Asia
+Rwanda	2.7	Africa
+"Saint Helena, Ascension, and Tristan da Cunha"	14	Africa
+Saint Kitts and Nevis	4.5	Central America
+Saint Lucia	20	Central America
+Saint Pierre and Miquelon	8.7	North America
+Saint Vincent and the Grenadines	18.8	Central America
+Samoa	5.2	Australia - Oceania
+San Marino	8.1	Europe
+Sao Tome and Principe	12.2	Africa
+Saudi Arabia	6	Middle East
+Senegal	48	Africa
+Serbia	14.1	Europe
+Seychelles	3	Africa
+Sierra Leone	15	Africa
+Singapore	2.25	East Asia/Southeast Asia
+Sint Maarten	12	Central America
+Slovakia	5	Europe
+Slovenia	7.64	Europe
+South Africa	28.53	Africa
+Spain	14.13	Europe
+Sri Lanka	4.83	South Asia
+Sudan	19.6	Africa
+Suriname	8.9	South America
+Sweden	6.78	Europe
+Switzerland	2.31	Europe
+Syria	50	Middle East
+Taiwan	3.73	East Asia/Southeast Asia
+Tajikistan	2.4	Central Asia
+Tanzania	10.3	Africa
+Thailand	0.99	East Asia/Southeast Asia
+Timor-Leste	4.4	East Asia/Southeast Asia
+Togo	6.9	Africa
+Tokelau	2	Australia - Oceania
+Tonga	1.1	Australia - Oceania
+Trinidad and Tobago	4.9	Central America
+Tunisia	15.5	Africa
+Turkey	13.68	Middle East
+Turkmenistan	11	Central Asia
+Turks and Caicos Islands	10	Central America
+Uganda	9.4	Africa
+Ukraine	8.89	Europe
+United Arab Emirates	1.6	Middle East
+United Kingdom	3.17	Europe
+United States	3.89	North America
+Uruguay	7.6	South America
+Uzbekistan	5	Central Asia
+Vanuatu	1.7	Australia - Oceania
+Venezuela	6.9	South America
+Vietnam	3.11	East Asia/Southeast Asia
+Virgin Islands	10.4	Central America
+Wallis and Futuna	8.8	Australia - Oceania
+West Bank	27.9	Middle East
+Yemen	27	Middle East
+Zambia	15	Africa
+Zimbabwe	11.3	Africa
