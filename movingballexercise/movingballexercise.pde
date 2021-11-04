@@ -7,8 +7,6 @@
 * This program is my own work - Digital Signature (B.W)   */
 
 
-
-
 float xspeed = 2;
 float easing = 0.95;
 float circleX;
@@ -24,23 +22,24 @@ void draw() {
   background(0);
   fill(255);
   ellipse(circleX, height/2, 50, 50);
-  if (start) {
+  if (start) { // True
     circleX = circleX + xspeed * easing;
 
     if (circleX > width-25) {
       xspeed = -xspeed * easing;
     }
 
-    if (circleX < 0+25) {
+    if (circleX < 25) {
       xspeed = 2 * easing;
     }
   }
 }
 
 void mousePressed() {
-  if (start) {
+  if (start) { // If true, turn back false (make it stop)
     start = false;
-  } else {
+  } 
+  else { // If false, make it true (make it move)
     start = true;
   }
 }
