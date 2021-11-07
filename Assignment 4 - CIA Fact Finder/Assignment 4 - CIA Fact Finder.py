@@ -111,10 +111,10 @@ def main():
         print(str(countries.index(i)+1)+". "+i)
     while True:
         # User picks between 4 options
-        choice = input("Would you like to view one of the countries stats (V), compare two of the strongest countires (C), add your own country to one of the text files (A) or exit the program (E)? ").lower()
+        choice = input("Would you like to view one of the countries stats (V), compare two of the strongest countries (C), add your own country to one of the text files (A) or exit the program (E)? ").lower()
         while choice != 'v' and choice != 'c' and choice != 'a' and choice != 'e': # Error checking
             print("That is an invalid input")
-            choice = input("Would you like to view a countries stats (V), compare two of the strongest countires (C), add your own country to a text file (A) or exit the program (E)? ").lower()
+            choice = input("Would you like to view a countries stats (V), compare two of the strongest countries (C), add your own country to a text file (A) or exit the program (E)? ").lower()
         if choice == 'v': # View stats of country
             user_country = input("Which country's statistics would you like to view? ").title() # Input a valid country
             while user_country not in countries:
@@ -133,7 +133,7 @@ def main():
                 get_country_stats("populationBW.txt", user_country)
             elif data_selection == 'u':
                 get_country_stats("unemploymentBW.txt", user_country)
-        elif choice == 'c': # Compare two countires
+        elif choice == 'c': # Compare two countries
             first_country = input("What is the first country you want to compare with? ").title() # Gets the first country
             while first_country not in countries:
                 print("That is an invalid country!")
