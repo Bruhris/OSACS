@@ -111,8 +111,8 @@ Jordan	"10,909,567"	Middle East
 Kazakhstan	"19,245,793"	Central Asia
 Kenya	"54,685,051"	Africa
 Kiribati	"113,001"	Australia - Oceania
-"Korea, North"	"25,831,360"	East Asia/Southeast Asia
-"Korea, South"	"51,715,162"	East Asia/Southeast Asia
+North Korea	"25,831,360"	East Asia/Southeast Asia
+South Korea	"51,715,162"	East Asia/Southeast Asia
 Kosovo	"1,935,259"	Europe
 Kuwait	"3,032,065"	Middle East
 Kyrgyzstan	"6,018,789"	Central Asia

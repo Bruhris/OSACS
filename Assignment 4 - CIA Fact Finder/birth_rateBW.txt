@@ -108,8 +108,8 @@ Jordan	22.79	Middle East
 Kazakhstan	15.87	Central Asia
 Kenya	26.78	Africa
 Kiribati	20.27	Australia - Oceania
-"Korea, North"	14.35	East Asia/Southeast Asia
-"Korea, South"	6.89	East Asia/Southeast Asia
+North Korea 14.35	East Asia/Southeast Asia
+South Korea	6.89	East Asia/Southeast Asia
 Kosovo	15.05	Europe
 Kuwait	17.9	Middle East
 Kyrgyzstan	20.06	Central Asia
