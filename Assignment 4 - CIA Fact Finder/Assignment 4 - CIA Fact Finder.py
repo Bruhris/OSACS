@@ -111,7 +111,7 @@ def main():
         print(str(countries.index(i)+1)+". "+i)
     while True:
         # User picks between 4 options
-        choice = input("Would you like to view a countries stats (V), compare two of the strongest countires (C), add your own country to a text file (A) or exit the program (E)? ").lower()
+        choice = input("Would you like to view one of the countries stats (V), compare two of the strongest countires (C), add your own country to one of the text files (A) or exit the program (E)? ").lower()
         while choice != 'v' and choice != 'c' and choice != 'a' and choice != 'e': # Error checking
             print("That is an invalid input")
             choice = input("Would you like to view a countries stats (V), compare two of the strongest countires (C), add your own country to a text file (A) or exit the program (E)? ").lower()
