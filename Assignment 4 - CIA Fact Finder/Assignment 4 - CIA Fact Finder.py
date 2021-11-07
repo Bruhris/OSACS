@@ -120,7 +120,7 @@ def main():
             while user_country not in countries:
                 print("That is an invalid country!")
                 user_country = input("Which country's statistics would you like to view? ").title()
-            print("List of data files:\nBirth Rate = BR\nGross Domestic Product (In billions) = GDP\nPopulation = P\nUnemployment = U")
+            print("List of data files:\nBirth Rate = BR\nGross Domestic Product = GDP\nPopulation = P\nUnemployment = U")
             data_selection = input("Which of the following statistics of {0} would you like to view? ".format(user_country)).lower() # Pick which data of the selected country the user wants to view
             while data_selection != 'br' and data_selection != 'gdp' and data_selection != 'p' and data_selection != 'u':
                 print("That is an invalid input")
