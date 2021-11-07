@@ -217,4 +217,3 @@ West Bank	27.9	Middle East
 Yemen	27	Middle East
 Zambia	15	Africa
 Zimbabwe	11.3	Africa
-asdf    2354   deasd
