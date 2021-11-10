@@ -30,10 +30,9 @@ HEAD = 'head'
 BODY = 'body'
 FEET = 'feet'
 
-# Get the size of the terminal window:
+
 WIDTH = shutil.get_terminal_size()[0]
-# We can't print to the last column on Windows without it adding a
-# newline automatically, so reduce the width by one:
+
 WIDTH -= 1
 
 
@@ -44,32 +43,34 @@ def main():
 
     ducklingLanes = [None] * (WIDTH // DUCKLING_WIDTH)
 
-    while True:  # Main program loop.
+    while True:  
         for laneNum, ducklingObj in enumerate(ducklingLanes):
-            # See if we should create a duckling in this lane:
+            
             if (ducklingObj == None and random.random() <= DENSITY):
-                    # Place a duckling in this lane:
+                    
                     ducklingObj = Duckling()
                     ducklingLanes[laneNum] = ducklingObj
 
             if ducklingObj != None:
-                # Draw a duckling if there is one in this lane:
+                
+                # Displays part of the duckling then selects new body part
                 print(ducklingObj.getNextBodyPart(), end='')
-                # Delete the duckling if we've finished drawing it:
+                    
                 if ducklingObj.partToDisplayNext == None:
                     ducklingLanes[laneNum] = None
             else:
-                # Draw five spaces since there is no duckling here.
+   
                 print(' ' * DUCKLING_WIDTH, end='')
 
-        print()  # Print a newline.
-        sys.stdout.flush()  # Make sure text appears on the screen.
+        print()  
+        sys.stdout.flush()  
         time.sleep(PAUSE)
 
-
+# Create Duckling class
 class Duckling:
+    # Constructor of Duckling that gives random attributes to new duckling
     def __init__(self):
-        # Assigns random features to the 
+
         self.direction = random.choice([LEFT, RIGHT])
         self.body = random.choice([CHUBBY, VERY_CHUBBY])
         self.mouth = random.choice([OPEN, CLOSED])
@@ -82,17 +83,17 @@ class Duckling:
 
         self.partToDisplayNext = HEAD
 
+    # Creates head duckling as string based on instance variables and returns it
     def getHeadStr(self):
-        """Returns the string of the duckling's head."""
         headStr = ''
         if self.direction == LEFT:
-            # Get the mouth:
+
             if self.mouth == OPEN:
                 headStr += '>'
             elif self.mouth == CLOSED:
                 headStr += '='
 
-            # Get the eyes:
+
             if self.eyes == BEADY and self.body == CHUBBY:
                 headStr += '"'
             elif self.eyes == BEADY and self.body == VERY_CHUBBY:
@@ -104,12 +105,12 @@ class Duckling:
             elif self.eyes == ALOOF:
                 headStr += '``'
 
-            headStr += ') '  # Get the back of the head.
+            headStr += ') ' 
 
         if self.direction == RIGHT:
-            headStr += ' ('  # Get the back of the head.
+            headStr += ' ('  
 
-            # Get the eyes:
+
             if self.eyes == BEADY and self.body == CHUBBY:
                 headStr += '"'
             elif self.eyes == BEADY and self.body == VERY_CHUBBY:
@@ -128,23 +129,22 @@ class Duckling:
                 headStr += '='
 
         if self.body == CHUBBY:
-            # Get an extra space so chubby ducklings are the same
-            # width as very chubby ducklings.
+
+
             headStr += ' '
 
         return headStr
-
+    # Creates body of duckling as string based on instance variables and returns it
     def getBodyStr(self):
-        """Returns the string of the duckling's body."""
-        bodyStr = '('  # Get the left side of the body.
+        bodyStr = '('  
         if self.direction == LEFT:
-            # Get the interior body space:
+
             if self.body == CHUBBY:
                 bodyStr += ' '
             elif self.body == VERY_CHUBBY:
                 bodyStr += '  '
 
-            # Get the wing:
+
             if self.wing == OUT:
                 bodyStr += '>'
             elif self.wing == UP:
@@ -153,7 +153,7 @@ class Duckling:
                 bodyStr += 'v'
 
         if self.direction == RIGHT:
-            # Get the wing:
+
             if self.wing == OUT:
                 bodyStr += '<'
             elif self.wing == UP:
@@ -161,32 +161,25 @@ class Duckling:
             elif self.wing == DOWN:
                 bodyStr += 'v'
 
-            # Get the interior body space:
             if self.body == CHUBBY:
                 bodyStr += ' '
             elif self.body == VERY_CHUBBY:
                 bodyStr += '  '
 
-        bodyStr += ')'  # Get the right side of the body.
+        bodyStr += ')'
 
         if self.body == CHUBBY:
-            # Get an extra space so chubby ducklings are the same
-            # width as very chubby ducklings.
             bodyStr += ' '
 
         return bodyStr
-
+    # Creates feet of duckling as string based on instance variables and returns it
     def getFeetStr(self):
-        """Returns the string of the duckling's feet."""
         if self.body == CHUBBY:
             return ' ^^  '
         elif self.body == VERY_CHUBBY:
             return ' ^ ^ '
-
+    # Checks which body part must be displayed next and returns the body part. If there is nobody parts left, return none
     def getNextBodyPart(self):
-        """Calls the appropriate display method for the next body
-        part that needs to be displayed. Sets partToDisplayNext to
-        None when finished."""
         if self.partToDisplayNext == HEAD:
             self.partToDisplayNext = BODY
             return self.getHeadStr()
