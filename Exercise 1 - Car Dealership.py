@@ -15,14 +15,14 @@ class Car:
         print("The color of the car is",self.colour)
         print("The price of the car is $"+str(self.price))
 
-car1 = Car("Lexus", "LC 500", "2001", "Mechanical", "Red", "1000")
-car2 = Car("Ford", "Water Bottle", "1991", "Digital", "Blue", "1500")
-car3 = Car("BMW", "Sauce", "1200", "Mechanical", "Yellow", "1040")
-car4 = Car("Chevrolet", "Guacamole", "1945", "Mechanical", "Green", "4200")
-car5 = Car("Mitsubishi", "Nuggets", "1835", "Mechanical", "Cyan", "6031")
-car6 = Car("Tesla", "Fruit", "5014", "Mechanical", "Magenta", "1456")
+vehicle1 = Car("Lexus", "LC 500", "2001", "Mechanical", "Red", "1000")
+vehicle2 = Car("Ford", "Water Bottle", "1991", "Digital", "Blue", "1500")
+vehicle3 = Car("BMW", "Sauce", "1200", "Mechanical", "Yellow", "1040")
+vehicle4 = Car("Chevrolet", "Guacamole", "1945", "Mechanical", "Green", "4200")
+vehicle5 = Car("Mitsubishi", "Nuggets", "1835", "Mechanical", "Cyan", "6031")
+vehicle6 = Car("Tesla", "Fruit", "5014", "Mechanical", "Magenta", "1456")
 
-cars = [car1,car2,car3,car4,car5,car6]
+lot = [vehicle1,vehicle2,vehicle3,vehicle4,vehicle5,vehicle6]
 
-for i in cars:
+for i in lot:
     i.car_information()
