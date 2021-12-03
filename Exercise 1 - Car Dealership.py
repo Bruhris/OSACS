@@ -6,6 +6,7 @@ class Car:
         self.odometer = odometer
         self.colour = colour
         self.price = price
+
     def car_information(self):
         print()
         print("The make of the car is",self.make)
