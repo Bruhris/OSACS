@@ -3,7 +3,24 @@ import random
 class Player:
     def __init__(self):
         self.score = 0
-        self.pins = 10
+
+    '''def throw(self):
+        self.pins_hit = random.randint(0,self.pins)
+        while self.pins_hit > self.pins:
+            self.pins_hit = random.randint(0,self.pins)
+        if self.pins_hit == self.pins:
+            self.got_Score = 20
+        self.score += self.got_Score
+        self.pins -= self.pins_hit
+        
+        print(f"You hit {self.pins_hit} pins!")
+        print(f"You scored {self.got_Score} points!")
+        print(f"Your total score is {self.score}!")
+        print(f"There are {self.pins} remaining")'''
+
+    def set_pins(self, pins):
+        self.pins = pins
+
 
 
 class Bowling:
@@ -36,31 +53,7 @@ class Bowling:
                 break
             except TypeError:
                 print("That is not a valid input!")
-    def get_players(self):
-        while True:
-            try:
-                no_players = int(input("How many players do you want in your game? "))
-                self.player_num = no_players
-                break
-            except TypeError:
-                print("That is not a valid input!")
 
-    def set_players(self):
-        return self.player_num
-
-    '''def throw(self, player):
-        self.pins_hit = random.randint(0,self.pins)
-        while self.pins_hit > self.pins:
-            self.pins_hit = random.randint(0,self.pins)
-        if self.pins_hit == self.pins:
-            self.got_Score = 20
-        self.score += self.got_Score
-        self.pins -= self.pins_hit
-        
-        print(f"You hit {self.pins_hit} pins!")
-        print(f"You scored {self.got_Score} points!")
-        print(f"Your total score is {self.score}!")
-        print(f"There are {self.pins} remaining")'''
             
         
 
@@ -73,11 +66,8 @@ def main():
     BowlingGame.get_throws()
     BowlingGame.get_pins()
     BowlingGame.get_players()
-    players = {}
-
-    for i in range(1, BowlingGame.set_players()+1):
-        name = "player_{}".format(i)
-        players[name] = players.get(name, Player())
+    player_1 = Player()
+    player_2 = Player()
 
 
     
