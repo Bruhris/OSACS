@@ -62,20 +62,25 @@ class BowlingGame:
         return self.players
     
     def scoring_report(self, points, name):
-        print(f"{name} now has a total of {points} points!")
+        print(f"{name} now has a total of {points} points!\n")
     
-    def end_report(self, player1, player2):
-        self.player1 = player1
-        self.player2 = player2
-
-        print(f"{self.player1.get_name()} ended the game with a total of {player1.get_score()}")
-        print(f"{self.player2.get_name()} ended the game with a total of {player2.get_score()}")
-        if self.player1.get_score() > self.player2.get_score():
-            print(f"{self.player1.get_name()} has won the game by {self.player1.get_score() - self.player2.get_score()} points!")
-        elif self.player1.get_score() == self.player2.get_score():
-            print(f"{self.player1.get_name()} got the same amount of points as {self.player1.get_name()}, resulting in a tie!")
+    def end_report(self, playersDict):
+        self.high_score = 0
+        self.winners = ["PLAYER"]
+        for i in playersDict:
+            player = playersDict.get(i)
+            print(f"{player.get_name()} end up with a total of {player.get_score()} points!")
+            if player.get_score() > self.high_score:
+                self.high_score = player.get_score()
+                self.winner[0] = player.get_name()
+            elif player.get_score() == self.high_score():
+                self.winner.append(player.get_name())
+        if self.winner.size() > 1:
+            print(f"There was a tie between {str(self.winner)[1:-1]}!")
         else:
-            print(f"{self.player2.get_name()} has won the game by {self.player2.get_score() - self.player1.get_score()} points!")
+            print(f"The winner of the game is {self.winner}!")
+
+        
 
 def main():
     print("Welcome to Boris' Bowling Game!~")
@@ -90,13 +95,13 @@ def main():
     
     while True:
         Game = BowlingGame()
-        no_players = int(input("How many players will be playing in this bowling game?"))
+        no_players = int(input("How many players will be playing in this bowling game? "))
         Game.set_players(no_players)
         players = {}
 
         for i in range(Game.get_players()):
             objname = f"Player_{i+1}"
-            name = input(f"What is the name of player {i+1}")
+            name = input(f"What is the name of player {i+1}? ")
             players[objname] = Player(name)
 
 
@@ -112,7 +117,8 @@ def main():
             try:
                 throws = int(input("How many throws do you want per frame? "))
                 for i in players:
-                    i.set_throws(throws)
+                    player = players.get(i)
+                    player.set_throws(throws)
                 break
             except ValueError:
                 print("That is an invalid input!")
@@ -120,8 +126,9 @@ def main():
         for i in range(1, Game.get_frames()+1):
             print(f"Frame: {i}")
             for player in players:
-                player.throw() # THis is wrong
-                Game.scoring_report(player.get_score(), player.get_name())
+                temp = players.get(player)
+                temp.throw()
+                Game.scoring_report(temp.get_score(), temp.get_name())
 
         Game.end_report(players)
         again = play_again()
@@ -130,10 +137,10 @@ def main():
             break
 
 def play_again():
-    choice = ("Do you want to play again?").lower()
+    choice = input("Do you want to play again? (Y or N)").lower()
     while choice != "n" and choice != "y":
         print("That is an invalid input!")
-        choice = ("Do you want to play again?").lower()
+        choice = input("Do you want to play again? (Y or N)").lower()
     if choice == "n":
         return False
     else:
