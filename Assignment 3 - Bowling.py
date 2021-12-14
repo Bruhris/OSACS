@@ -55,6 +55,12 @@ class BowlingGame:
     def get_frames(self):
         return self.frames
     
+    def set_players(self, players):
+        self.players = players
+    
+    def get_players(self):
+        return self.players
+    
     def scoring_report(self, points, name):
         print(f"{name} now has a total of {points} points!")
     
@@ -83,12 +89,16 @@ def main():
     print("- Each pin knocked over will be counted as 1 point if all ten pins are not knocked over or if all pins are not all knocked over within the first two frames")
     
     while True:
-        name1 = input("What is the name of player 1? ")
-        name2 = input("What is the name of player 2? ")
         Game = BowlingGame()
-        player1 = Player(name1)
-        player2 = Player(name2)
-        players = [player1, player2]
+        no_players = int(input("How many players will be playing in this bowling game?"))
+        Game.set_players(no_players)
+        players = {}
+
+        for i in range(Game.get_players()):
+            objname = f"Player_{i+1}"
+            name = input(f"What is the name of player {i+1}")
+            players[objname] = Player(name)
+
 
         while True:
             try:
@@ -100,7 +110,6 @@ def main():
 
         while True:
             try:
-                
                 throws = int(input("How many throws do you want per frame? "))
                 for i in players:
                     i.set_throws(throws)
@@ -110,11 +119,11 @@ def main():
 
         for i in range(1, Game.get_frames()+1):
             print(f"Frame: {i}")
-            player1.throw()
-            Game.scoring_report(player1.get_score(), player1.get_name())
-            player2.throw()
-            Game.scoring_report(player2.get_score(), player2.get_name())
-        Game.end_report(player1, player2)
+            for player in players:
+                player.throw() # THis is wrong
+                Game.scoring_report(player.get_score(), player.get_name())
+
+        Game.end_report(players)
         again = play_again()
         if again == False:
             print("Thanks for playing my game!")
