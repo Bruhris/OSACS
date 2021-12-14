@@ -81,6 +81,7 @@ def main():
     print("- If all pins are knocked over in the first throw of a frame, it will be counted as a STRIKE and you will gain 20 points")
     print("- If all pins are knocked over in the second throw of a frame, it will be counted as a SPARE and you will gain 15 points")
     print("- Each pin knocked over will be counted as 1 point if all ten pins are not knocked over or if all pins are not all knocked over within the first two frames")
+    
     while True:
         name1 = input("What is the name of player 1? ")
         name2 = input("What is the name of player 2? ")
@@ -88,12 +89,25 @@ def main():
         player1 = Player(name1)
         player2 = Player(name2)
         players = [player1, player2]
-        print(players[0])
-        frames = int(input("How many frames do you want to play? "))
-        Game.set_frames(frames)
-        throws = int(input("How many throws do you want per frame? "))
-        for i in players:
-            i.set_throws(throws)
+
+        while True:
+            try:
+                frames = int(input("How many frames do you want to play? "))
+                Game.set_frames(frames)
+                break
+            except ValueError:
+                print("That is an invalid input!")
+
+        while True:
+            try:
+                
+                throws = int(input("How many throws do you want per frame? "))
+                for i in players:
+                    i.set_throws(throws)
+                break
+            except ValueError:
+                print("That is an invalid input!")
+
         for i in range(1, Game.get_frames()+1):
             print(f"Frame: {i}")
             player1.throw()
