@@ -66,6 +66,8 @@ class BowlingGame:
         print(f"{self.player2.get_name()} ended the game with a total of {player2.get_score()}")
         if self.player1.get_score() > self.player2.get_score():
             print(f"{self.player1.get_name()} has won the game by {self.player1.get_score() - self.player2.get_score()} points!")
+        elif self.player1.get_score() == self.player2.get_score():
+            print(f"{self.player1.get_name()} got the same amount of points as {self.player1.get_name()}, resulting in a tie!")
         else:
             print(f"{self.player2.get_name()} has won the game by {self.player2.get_score() - self.player1.get_score()} points!")
 
