@@ -76,9 +76,9 @@ class BowlingGame:
             elif player.get_score() == self.high_score():
                 self.winner.append(player.get_name())
         if self.winner.size() > 1:
-            print(f"There was a tie between {str(self.winner)[1:-1]}!")
+            print(f"There was a tie between the players: {str(self.winner)[1:-1]}! Congratulations, you are all #1 bowlers!")
         else:
-            print(f"The winner of the game is {self.winner}!")
+            print(f"The winner of the game is {self.winner}! Congratulations, you are the #1 bowler!")
 
         
 
@@ -95,7 +95,15 @@ def main():
     
     while True:
         Game = BowlingGame()
-        no_players = int(input("How many players will be playing in this bowling game? "))
+        while True:
+            try:
+                no_players = int(input("How many players will be playing in this bowling game? "))
+            except ValueError:
+                print("That is an invalid input!")
+                continue
+            else:
+                break
+     
         Game.set_players(no_players)
         players = {}
 
@@ -119,9 +127,11 @@ def main():
                 for i in players:
                     player = players.get(i)
                     player.set_throws(throws)
-                break
             except ValueError:
                 print("That is an invalid input!")
+                continue
+            else:
+                break
 
         for i in range(1, Game.get_frames()+1):
             print(f"Frame: {i}")
@@ -137,10 +147,14 @@ def main():
             break
 
 def play_again():
-    choice = input("Do you want to play again? (Y or N)").lower()
-    while choice != "n" and choice != "y":
-        print("That is an invalid input!")
+    while True:
         choice = input("Do you want to play again? (Y or N)").lower()
+        if choice != "n" and choice != "y":
+            print("That is an invalid input!")
+            continue
+        else:
+            break 
+        
     if choice == "n":
         return False
     else:
