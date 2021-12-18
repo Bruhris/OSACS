@@ -1,3 +1,11 @@
+# * ***********************************************************************
+# Boris Wang
+# Assignment 3 - Bowling
+# Computer Science 30 - Block 6
+# December 17, 2021
+
+# This program is my own work - BW
+
 import random
 import time
 
