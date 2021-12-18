@@ -1,3 +1,11 @@
+# * ***********************************************************************
+# Boris Wang
+# Exercise 1 - Car Dealership
+# Computer Science 30 - Block 6
+# November 30, 2021
+
+# This program is my own work - BW
+
 class Car:
     def __init__(self, make, model, year, odometer, colour, price):
         self.make = make
