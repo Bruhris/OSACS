@@ -1,4 +1,5 @@
 import random
+import time
 
 class Player:
     def __init__(self, name):
@@ -17,10 +18,10 @@ class Player:
 
     def throw(self):
         for i in range(self.throws):
-            self.bowl = random.choice(["hit","miss"])
+            self.bowl = random.choice(["hit", "hit", "hit", "miss"])
             if self.bowl == "hit":
                 self.hit_pins = random.randint(1, self.pins)
-                print(f"On throw {i+1}, {self.name} hit {self.hit_pins} pins!")
+                print(f"On throw {i+1}, {self.name} hit {self.hit_pins} pin(s)!")
                 self.pins = self.pins - self.hit_pins
             else:
                 print(f"OH NO! {self.name} missed and hit 0 pins!")
@@ -37,6 +38,7 @@ class Player:
             elif self.pins == 0:
                 self.score += 10
                 break
+            time.sleep(0.5)
 
         if self.pins != 0:
             self.score += 10 - self.pins
@@ -61,24 +63,30 @@ class BowlingGame:
     def get_players(self):
         return self.players
     
-    def scoring_report(self, points, name):
-        print(f"{name} now has a total of {points} points!\n")
+    def round_display(self, points, name):
+        print(f"{name} now has a total of {points} points!")
+        time.sleep(0.5)
+        print()
     
     def end_report(self, playersDict):
         self.high_score = 0
         self.winners = ["PLAYER"]
         for i in playersDict:
-            player = playersDict.get(i)
-            print(f"{player.get_name()} end up with a total of {player.get_score()} points!")
-            if player.get_score() > self.high_score:
-                self.high_score = player.get_score()
-                self.winner[0] = player.get_name()
-            elif player.get_score() == self.high_score():
-                self.winner.append(player.get_name())
-        if self.winner.size() > 1:
-            print(f"There was a tie between the players: {str(self.winner)[1:-1]}! Congratulations, you are all #1 bowlers!")
+            self.player = playersDict.get(i)
+            print(f"{self.player.get_name()} end up with a total of {self.player.get_score()} points!")
+            if self.player.get_score() > self.high_score:
+                self.high_score = self.player.get_score()
+                self.winners[0] = self.player.get_name()
+            elif self.player.get_score() == self.high_score:
+                self.winners.append(self.player.get_name())
+            time.sleep(0.5)
+        if len(self.winners) > 1:
+            print(f"There was a tie between the players:", end=" ")
+            print(*self.winners, sep=', ', end='')
+            print("! Congratulations, you are all #1 bowlers!")
         else:
-            print(f"The winner of the game is {self.winner}! Congratulations, you are the #1 bowler!")
+            print(f"The winner of the game is {str(self.winners[0])}! Congratulations, you are the #1 bowler!")
+        time.sleep(0.5)
 
         
 
@@ -132,13 +140,15 @@ def main():
                 continue
             else:
                 break
-
+        time.sleep(0.5)
         for i in range(1, Game.get_frames()+1):
             print(f"Frame: {i}")
+            time.sleep(0.5)
             for player in players:
                 temp = players.get(player)
                 temp.throw()
-                Game.scoring_report(temp.get_score(), temp.get_name())
+                Game.round_display(temp.get_score(), temp.get_name())
+                time.sleep(0.5)
 
         Game.end_report(players)
         again = play_again()
@@ -148,7 +158,7 @@ def main():
 
 def play_again():
     while True:
-        choice = input("Do you want to play again? (Y or N)").lower()
+        choice = input("Do you want to play again? (Y or N) ").lower()
         if choice != "n" and choice != "y":
             print("That is an invalid input!")
             continue
